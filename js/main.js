@@ -2,7 +2,7 @@
  * @Author: aaa@163.com
  * @Date: 2025-05-28 09:19:04
  * @LastEditors: aaa@163.com
- * @LastEditTime: 2025-05-29 16:35:10
+ * @LastEditTime: 2025-05-29 17:31:55
  * @FilePath: \onnx_hand_pose_web\js\main.js
  * @Description: 
  */
@@ -116,6 +116,7 @@ class Model {
         if (e.data.type === "modelLoaded") {
             if (e.data.success) {
                 this.#modelLoaded = true
+                setTimeout(()=>{document.getElementById("loading").remove()},500)
                 return CreateMeadiaStream.mediaInit();
             } else {
                 alert(e.data.errMsg)
