@@ -108,7 +108,7 @@ class Model {
         this.#ctx = document.getElementById("amplify-canvas").getContext('2d')
         this.#offCanvas = new OffscreenCanvas(SIZE, SIZE)
         this.#offCtx = this.#offCanvas.getContext("2d");
-        this.#modelProcessingWorker = new Worker("../worker/modelProcessing.js")
+        this.#modelProcessingWorker = new Worker("/onnx_hand_pose_web/worker/modelProcessing.js")
         this.#modelProcessingWorker.addEventListener("message", this.workerMessage.bind(this))
         this.#modelProcessingWorker.postMessage({ type: "initModel" })
     }
