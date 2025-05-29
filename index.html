@@ -1,3 +1,11 @@
+<!--
+ * @Author: aaa@163.com
+ * @Date: 2025-05-28 09:18:45
+ * @LastEditors: aaa@163.com
+ * @LastEditTime: 2025-05-29 17:31:19
+ * @FilePath: \onnx_hand_pose_web\index.html
+ * @Description: 
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +13,24 @@
     <meta charset="UTF-8">
     <title>手势识别</title>
 </head>
-
+<style>
+    #loading{
+        position: fixed;
+        width: 200px;
+        height: 300px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 9;
+        font-size: 30px;
+        font-weight: 900;
+        color:orange
+    }
+</style>
 <body style="overflow: auto;text-align: center;">
+    <div id="loading">加载并初始化模型中</div>
     <video autoplay controls src="" id="video" style="display: none;"></video>
     <canvas id="amplify-canvas" width="640" height="640"></canvas>
     <p>手势说明-----<a href="https://github.com/hukenovs/hagrid" target="_blank">模型及数据集地址</a></p>
