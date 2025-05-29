@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>手势识别</title>
+</head>
+
+<body style="overflow: auto;text-align: center;">
+    <video autoplay controls src="" id="video" style="display: none;"></video>
+    <canvas id="amplify-canvas" width="640" height="640"></canvas>
+    <p>手势说明-----<a href="https://github.com/hukenovs/hagrid" target="_blank">模型及数据集地址</a></p>
+    <div style="width: 100vw;height: 400px;overflow:auto;">
+        <img src="./image/gestures.png" alt="" srcset="">
+    </div>
+</body>
+
+</html>
+<!-- <script src="./js/ort.min_v1.20.js"></script> -->
+<script src="./js/main.js"></script>
+<script>
+    async function startRecording() {
+        await Model.init()
+    }
+    startRecording()
+</script>
